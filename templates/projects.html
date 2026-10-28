@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Projects | Shaurya Jain Portfolio{% endblock %}
+
+{% block content %}
+<section class="projects-section">
+    <!-- Page Header -->
+    <div class="page-header">
+        <h1 class="page-title">Featured Projects</h1>
+        <p class="page-subtitle">A collection of academic and practical projects developed during my engineering coursework.</p>
+    </div>
+
+    <!-- Dynamic Projects Grid (rendered via Jinja2 loop) -->
+    <div class="projects-grid">
+        {% for project in projects %}
+            <article class="project-card">
+                <div>
+                    <div class="project-category">{{ project.category }}</div>
+                    <h2 class="project-title">{{ project.title }}</h2>
+                    <p class="project-description">{{ project.description }}</p>
+                </div>
+
+                <div class="project-tech">
+                    {% for tech in project.tech_stack %}
+                        <span class="tech-tag">{{ tech }}</span>
+                    {% endfor %}
+                </div>
+            </article>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

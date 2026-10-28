@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+
+{% block title %}Contact | Shaurya Jain Portfolio{% endblock %}
+
+{% block content %}
+<section class="contact-section">
+    <!-- Page Header -->
+    <div class="page-header">
+        <h1 class="page-title">Get in Touch</h1>
+        <p class="page-subtitle">Have a question, feedback, or an inquiry? Send me a message using the form below.</p>
+    </div>
+
+    <div class="contact-grid">
+        <!-- Contact Information Column -->
+        <div class="card">
+            <h2 class="card-title">
+                <span>📬</span>
+                <span>Contact Details</span>
+            </h2>
+            <p class="about-intro-text">
+                Feel free to reach out for academic collaborations, project discussions, or peer networking.
+            </p>
+
+            <ul class="contact-info-list">
+                <li class="contact-info-item">
+                    <div class="contact-icon">📧</div>
+                    <div class="contact-info-text">
+                        <h4>Email Address</h4>
+                        <p>shaurya.jain@example.com</p>
+                    </div>
+                </li>
+
+                <li class="contact-info-item">
+                    <div class="contact-icon">📍</div>
+                    <div class="contact-info-text">
+                        <h4>Location</h4>
+                        <p>Mumbai, Maharashtra, India</p>
+                    </div>
+                </li>
+
+                <li class="contact-info-item">
+                    <div class="contact-icon">🏛️</div>
+                    <div class="contact-info-text">
+                        <h4>College</h4>
+                        <p>D. J. Sanghvi College of Engineering</p>
+                    </div>
+                </li>
+
+                <li class="contact-info-item">
+                    <div class="contact-icon">🐙</div>
+                    <div class="contact-info-text">
+                        <h4>GitHub</h4>
+                        <p>github.com/shauryajain</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Contact Form Column -->
+        <div class="card">
+            <h2 class="card-title">
+                <span>✍️</span>
+                <span>Send a Message</span>
+            </h2>
+
+            <form action="{{ url_for('contact') }}" method="POST" class="contact-form">
+                <!-- Name Field -->
+                <div class="form-group">
+                    <label for="name">Your Name <span style="color: #f87171;">*</span></label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        class="form-control" 
+                        placeholder="e.g. John Doe" 
+                        value="{{ name if name else '' }}" 
+                        required
+                    >
+                </div>
+
+                <!-- Email Field -->
+                <div class="form-group">
+                    <label for="email">Email Address <span style="color: #f87171;">*</span></label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        class="form-control" 
+                        placeholder="e.g. john@example.com" 
+                        value="{{ email if email else '' }}" 
+                        required
+                    >
+                </div>
+
+                <!-- Message Field -->
+                <div class="form-group">
+                    <label for="message">Message <span style="color: #f87171;">*</span></label>
+                    <textarea 
+                        id="message" 
+                        name="message" 
+                        class="form-control" 
+                        rows="5" 
+                        placeholder="Write your message or inquiry here..." 
+                        required
+                    >{{ message if message else '' }}</textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary" style="margin-top: 0.5rem;">
+                    <span>Send Message</span>
+                    <span>✉</span>
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

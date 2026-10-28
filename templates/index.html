@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %}Home | Shaurya Jain Portfolio{% endblock %}
+
+{% block content %}
+<section class="hero-section">
+    <!-- Status / Role Badge -->
+    <div class="hero-badge">
+        <span>🎓</span>
+        <span>Computer Engineering Student &bull; Semester 3</span>
+    </div>
+
+    <!-- Main Hero Headings -->
+    <h1 class="hero-title">
+        Hello, I'm <span class="highlight">Shaurya Jain</span>
+    </h1>
+
+    <h2 class="hero-subtitle">
+        Welcome to my personal portfolio website!
+    </h2>
+
+    <!-- Introduction Text -->
+    <p class="hero-description">
+        I am a passionate second-year Computer Engineering student at <strong>Dwarkadas J. Sanghvi College of Engineering</strong>. 
+        I enjoy developing robust software solutions, exploring modern web technologies with Python &amp; Flask, and solving algorithmic problems. 
+        Feel free to explore my academic projects and technical work below!
+    </p>
+
+    <!-- Call to Action Buttons -->
+    <div class="hero-buttons">
+        <a href="{{ url_for('projects') }}" class="btn btn-primary">
+            <span>View My Projects</span>
+            <span>&rarr;</span>
+        </a>
+        <a href="{{ url_for('contact') }}" class="btn btn-secondary">
+            <span>Get in Touch</span>
+        </a>
+    </div>
+
+    <!-- Quick Highlights / Feature Cards -->
+    <div class="features-grid">
+        <div class="feature-card">
+            <div class="feature-icon">💻</div>
+            <h3>Backend Development</h3>
+            <p>Building clean, lightweight REST APIs and web servers using Python micro-frameworks like Flask.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h3>Data &amp; Algorithms</h3>
+            <p>Hands-on experience with Python data structures, SQLite database management, and Scikit-Learn.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">🚀</div>
+            <h3>Rapid Prototyping</h3>
+            <p>Translating conceptual ideas into practical, responsive, and functional web applications.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+
+{% block title %}About Me | Shaurya Jain Portfolio{% endblock %}
+
+{% block content %}
+<section class="about-section">
+    <!-- Page Header -->
+    <div class="page-header">
+        <h1 class="page-title">About Me</h1>
+        <p class="page-subtitle">Learn more about my background, education, and technical toolkit.</p>
+    </div>
+
+    <div class="about-grid">
+        <!-- Bio Card -->
+        <div class="card">
+            <h2 class="card-title">
+                <span>👤</span>
+                <span>Personal Overview</span>
+            </h2>
+            <p class="about-intro-text">
+                Hello! I'm <strong>Shaurya Jain</strong>, a Computer Engineering undergraduate student. 
+                My focus lies in building practical software applications with clean code architectures. 
+                I have a strong interest in backend engineering with Python, relational database management, and emerging web development frameworks.
+            </p>
+            <p class="about-intro-text">
+                I believe in continuous learning through hands-on project work, laboratory experiments, and building scalable prototypes to solve real-world problems.
+            </p>
+        </div>
+
+        <!-- Education Card -->
+        <div class="card">
+            <h2 class="card-title">
+                <span>🎓</span>
+                <span>Education</span>
+            </h2>
+            <div class="timeline-item">
+                <div class="timeline-year">2024 &ndash; 2028 (Expected)</div>
+                <div class="timeline-degree">Bachelor of Technology (B.Tech) in Computer Engineering</div>
+                <div class="timeline-institution">Dwarkadas J. Sanghvi College of Engineering (DJSCE), Mumbai</div>
+                <p class="about-intro-text" style="margin-top: 0.35rem; font-size: 0.9rem;">
+                    Currently in Second Year (Semester 3). Coursework includes Object-Oriented Programming, Data Structures, Python Programming Lab, and Database Management Systems.
+                </p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">Completed 2024</div>
+                <div class="timeline-degree">Higher Secondary Certificate (HSC) / Class 12</div>
+                <div class="timeline-institution">Science Stream (Mathematics, Physics, Chemistry)</div>
+            </div>
+        </div>
+
+        <!-- Technical Skills Card -->
+        <div class="card">
+            <h2 class="card-title">
+                <span>🛠️</span>
+                <span>Technical Skills</span>
+            </h2>
+
+            <div class="skills-category">
+                <div class="skills-category-title">Programming Languages</div>
+                <div class="skills-badges">
+                    <span class="badge">Python</span>
+                    <span class="badge">C / C++</span>
+                    <span class="badge">SQL</span>
+                    <span class="badge">JavaScript (Basic)</span>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <div class="skills-category-title">Web Development &amp; Frameworks</div>
+                <div class="skills-badges">
+                    <span class="badge">Python Flask</span>
+                    <span class="badge">Jinja2 Templating</span>
+                    <span class="badge">HTML5</span>
+                    <span class="badge">CSS3</span>
+                    <span class="badge">RESTful Routes</span>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <div class="skills-category-title">Databases &amp; Tools</div>
+                <div class="skills-badges">
+                    <span class="badge">SQLite</span>
+                    <span class="badge">Git &amp; GitHub</span>
+                    <span class="badge">Visual Studio Code</span>
+                    <span class="badge">Jupyter Notebooks</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Interests & Hobbies Card -->
+        <div class="card">
+            <h2 class="card-title">
+                <span>💡</span>
+                <span>Areas of Interest</span>
+            </h2>
+            <ul class="interests-list">
+                <li><span>🌐</span> Web Application Architecture</li>
+                <li><span>🤖</span> Machine Learning &amp; Data Science</li>
+                <li><span>🧩</span> Algorithmic Problem Solving</li>
+                <li><span>📖</span> Technical Reading &amp; Tech Trends</li>
+                <li><span>👥</span> Open Source Collaboration</li>
+                <li><span>🎨</span> Clean UI/UX Design</li>
+            </ul>
+        </div>
+    </div>
+</section>
+{% endblock %}
